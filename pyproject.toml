@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lazycommit"
+version = "0.1.0"
+description = "Commit messages written by a local, open-weight model. Your diff never leaves your machine."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["git", "commit", "llm", "local-ai", "open-weights", "ollama", "llama.cpp"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+lazycommit = "lazycommit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["lazycommit*"]
